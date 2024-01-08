@@ -1,0 +1,139 @@
+/*กำหนดหากหน้าต่างมีขนาด 1000px ขึ้นไป*/
+@media screen and (min-width :767px) {
+
+  /*------------------------ส่วนเมนูบาร์--------------------*/
+  /*แถบเมนูบาร์ที่แสดงเป็น บล็อก ในบรรดทัด*/
+  /* top nav */
+  
+  * {box-sizing: border-box;}
+  
+  body {
+    margin: 0;
+    font-family:sans-serif;
+  }
+  
+  .topnav {
+    overflow: hidden;
+    background-color: #e9e9e9;
+  }
+  
+  .topnav a {
+    float: left;
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+  }
+  
+  .topnav a:hover {
+    background-color: #ddd;
+    color: black;
+  }
+  
+  .topnav a.active {
+    /*background-color: #2196F3;*/
+    color: black;
+  }
+  
+  .topnav .login-float{
+    float: right;
+    }
+  }
+
+  /* body background */
+  body {
+    background-image: linear-gradient(rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.3)), url(https://images.unsplash.com/photo-1461773518188-b3e86f98242f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1738&q=80</header>
+);
+  }
+
+/*---------------------ส่วนของform----------------------*/
+input[type=email],
+input[type=text],
+input[type=password] {
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+}
+
+/*รูปแบบปุ่มกด*/
+button {
+  padding: 12px 20px;
+  margin: 8px 0;
+  /*ความกว้าง*/
+  box-sizing: border-box;
+}
+
+.form-column {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: auto;
+  padding: 10px;
+}
+
+section {
+  margin: auto;
+  width: auto;
+}
+
+fieldset {
+  padding: 10px;
+  margin: auto;
+  width: 25%;
+  text-align: center;
+}
+
+/*----------------------ส่วน BODY--------------------------*/
+/*เนื้อข้อความข้างใน*/
+body {
+  padding: 20px;
+  /*font-family: sans-serif; */
+}
+
+
+/*กำหนดหากหน้าต่างมีขนาด 1000px ลงมา*/
+@media screen and (max-width :767px) {
+
+  /*------------------------ส่วนเมนูบาร์--------------------*/
+  /*แถบเมนูบาร์ที่แสดงเป็น บล็อก ในบรรดทัด*/
+  /* top nav */
+  
+  * {box-sizing: border-box;}
+  
+  body {
+    margin: 0;
+    font-family:sans-serif;
+  }
+  
+  .topnav {
+    overflow: hidden;
+    background-color: #e9e9e9;
+  }
+  
+  .topnav a {
+    float: left;
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+  }
+  
+  .topnav a:hover {
+    background-color: #ddd;
+    color: black;
+  }
+  
+  .topnav a.active {
+    /*background-color: #2196F3;*/
+    color: black;
+  }
+  
+  
+  .topnav .login-float{
+    float: right;
+    }
+  }

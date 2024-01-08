@@ -1,0 +1,354 @@
+/*กำหนดหากหน้าต่างมีขนาด 1000px ขึ้นไป*/
+@media screen and (min-width :767px) {
+
+  /*------------------------ส่วนเมนูบาร์--------------------*/
+  /*เเถบเมนูบาร์ที่เเสดงเป็น บล็อก ในบรรดทัด*/
+  /*-----top nav-----*/
+
+  * {
+    box-sizing: border-box;
+  }
+
+  body {
+    margin: 0;
+    font-family: sans-serif;
+  }
+
+  .topnav {
+    overflow: hidden;
+    background-color: #e9e9e9;
+  }
+
+  .topnav a {
+    float: left;
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+  }
+
+  .topnav a:hover {
+    background-color: #ddd;
+    color: black;
+  }
+
+  .topnav a.active {
+    color: black;
+  }
+
+  .topnav .login-float {
+    float: right;
+  }
+
+  .welcome {
+    width: 100%;
+  }
+
+  /*----------------------ส่วน BODY--------------------------*/
+  /*Drop down list Menu*/
+
+  /*เนื้อข้อความข้างใน*/
+  body {
+    padding: 20px;
+    font-family: sans-serif;
+    background-size: cover;
+    background-image: url("https://images.unsplash.com/photo-1443884590026-2e4d21aee71c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1686&q=80");
+  }
+
+  /*-------------------กำหนดวิธีทำ banner--------------*/
+  #slider {
+    overflow: hidden;
+    /*ซ่อนฟังก์ชั้นต่างๆ*/
+    /* margin: 0px 15px; /*ชิดมุม*/
+    /* height: auto; */
+    border-radius: 8px;
+  }
+
+  /*ใช้กำหนดเฟรม figure ใช้กำหนดภาพได้*/
+  #slider figure {
+    position: relative;
+    /*กำหนดให้เลื่อน*/
+    width: 500%;
+    /*ขนาดเต็มเฟรม*/
+    margin: 0;
+    /*ชิดที่สุด*/
+    left: 0;
+    /*ทิศทางทางซ้าย*/
+    animation: 15S slider infinite;
+    /*กำหนดให้ banner สไลด์ไปทางซ้ายทุกๆ 15 วินาที*/
+  }
+
+  #slider figure img {
+    float: left;
+    /*ให้ภาพอยู่ติดซ้าย*/
+    width: 20%;
+    /*กำหนดขนาดให้มันเท่ากับ @keyframes ที่เราตั้งไว้ภาพจะได้แบ่งเป็นเฟรมอย่างพอดี*/
+    height: 350px;
+    /*ให้ขนาดไม่ยืดเกินไป*/
+  }
+
+  @keyframes slider {
+    0% {
+      left: 0;
+    }
+
+    /*0%ยังอยู่ที่เดิมที่ left 0*/
+    20% {
+      left: 0;
+    }
+
+    /*20%ยังอยู่ที่เดิมที่ left 0*/
+    25% {
+      left: -100%;
+    }
+
+    /*เมื่อผ่าน20%-25%จะเลื่อนไปที่ฝั่งซ้ายแต่ฝังเข้าไป-100%ตามbannerก็จะหายไป*/
+    45% {
+      left: -100%;
+    }
+
+    /*ผ่านไปอีกหน้าเมื่อ%ที่50*/
+    50% {
+      left: -200%;
+    }
+
+    70% {
+      left: -200%;
+    }
+
+    /*ผ่านไปอีกหน้าเมื่อ%ที่80*/
+    80% {
+      left: -300%;
+    }
+
+    /*เมื่อจบ90%ต้องย้อนกลับไปรูปเดิมใน10%*/
+    90% {
+      left: -300%;
+    }
+
+  }
+
+  /*---------------- เนื้อหา section ----------------*/
+  /*เนื้อข้อความข้างใน*/
+  section {
+    /* padding: 10px; */
+    /*ระยะห่างระหว่าง banner และ footer*/
+    width: 75%;
+    /*ใช้เพื่อกำหนดความกว้างของเนื้อหาว่ากว้าง 75% */
+    /*การใช้ margin คือการครอบลุมทั้งเว็บ ตัว margin auto คือการบอกว่าให้คุณไปอยู่ตรงกลางของเว็บนะ*/
+  }
+
+  /*--------------------aboutus-------------------*/
+  /*-- members pic--*/
+  img.member {
+    width: 70%;
+  }
+
+  /*----- footer ------*/
+  footer {
+    margin: auto;
+    width: 100%;
+    padding: 50px;
+    background-color: maroon;
+    box-sizing: border-box;
+    font-size: 15px;
+    color: white;
+    text-align: center;
+  }
+}
+
+/*------------------------------------------------------------------*/
+
+/*กำหนดหากหน้าต่างมีขนาด 1000px ลงมา*/
+@media screen and (max-width :767px) {
+
+  /*------------------------ส่วนเมนูบาร์--------------------*/
+  /*แถบเมนูบาร์ที่แสดงเป็น บล็อก ในบรรดทัด   
+  /*----- top nav -----*/
+
+  * {
+    box-sizing: border-box;
+  }
+
+  body {
+    margin: 0;
+    font-family: sans-serif;
+  }
+
+  .topnav {
+    overflow: hidden;
+    background-color: #e9e9e9;
+  }
+
+  .topnav a {
+    float: left;
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+  }
+
+  .topnav a:hover {
+    background-color: #ddd;
+    color: black;
+  }
+
+  .topnav a.active {
+    color: black;
+  }
+
+  .navbar .dropdownsearch {
+    float: right;
+  }
+
+
+  .topnav .login-float {
+    float: right;
+  }
+
+  /*----------------------ส่วน BODY--------------------------*/
+  /*เนื้อข้อความข้างใน*/
+  body {
+    padding: 20px;
+    font-family: sans-serif;
+    background-size: cover;
+    background-image: url("https://images.unsplash.com/photo-1443884590026-2e4d21aee71c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1686&q=80");
+  }
+
+  /*---------------------เนื้อหา section--------------------*/
+  section {
+    padding: 10px;
+    width: 80%;
+    /*ใช้เพื่อกำหนดความกว้างของเนื้อหาว่ากว้าง 75% */
+    margin: auto;
+    /*การใช้ margin คือการครอบลุมทั้งเว็บ ตัว margin auto คือการบอกว่าให้คุณไปอยู่ตรงกลางของเว็บนะ*/
+  }
+
+  /*-------------------กำหนดวิธีทำ banner--------------*/
+  #slider {
+    overflow: hidden;
+    /*เลือนได้*/
+    margin: 0;
+    width: 100%;
+    border-radius: 8px;
+
+  }
+
+  #slider figure {
+    position: relative;
+    /*กำหนดให้เลื่อน*/
+    width: 500%;
+    /*ขนาดเต็มเฟรม*/
+    margin: 0;
+    left: 0;
+    /*ทิศทางทางซ้าย*/
+    animation: 15s slider infinite;
+    /*กำหนดให้banner สไลด์ไปทางซ้ายทุกๆ20วินาที*/
+  }
+
+  #slider figure img {
+    float: left;
+    width: 20%;
+    max-height: 200px;
+  }
+
+  @keyframes slider {
+    0% {
+      left: 0;
+    }
+
+    /*0%ยังอยู่ที่เดิมที่ left 0*/
+    20% {
+      left: 0;
+    }
+
+    /*20%ยังอยู่ที่เดิมที่ left 0*/
+    25% {
+      left: -100%;
+    }
+
+    /*เมื่อผ่าน20%-25%จะเลื่อนไปที่ฝั่งซ้ายเเต่ฝังเข้าไป-100%ตามbannerก็จะหายไป*/
+    45% {
+      left: -100%;
+    }
+
+    50% {
+      left: -200%;
+    }
+
+    /*ผ่านไปอีกหน้าเมื่อ%ที่50*/
+    70% {
+      left: -200%;
+    }
+
+    80% {
+      left: -300%;
+    }
+
+    /*ผ่านไปอีกหน้าเมื่อ%ที่80*/
+    90% {
+      left: -300%;
+    }
+
+    /*เมื่อจบ90%ต้องย้อนกลับไปรูปเดิมใน10%*/
+  }
+
+  .welcome {
+    display: flex;
+    justify-content: center;
+    padding: 50px 0;
+    width: 100%;
+  }
+
+  /*--------------------aboutus-------------------*/
+  /*--ภาพรวม--*/
+  img.member {
+    width: 70%;
+  }
+
+  /*-ส่วน footer--*/
+  footer {
+    margin: auto;
+    width: 100%;
+    padding: 50px;
+    background-color: maroon;
+    box-sizing: border-box;
+    font-size: 15px;
+    color: white;
+    text-align: center;
+  }
+}
+
+/*ปรับส่วนรูป บนaboutus*/
+.right {
+  float: right;
+}
+
+.left {
+  float: left;
+}
+
+.img-top {
+  height: 390px;
+}
+
+img.member {
+  padding: 15px;
+  width: 70%;
+}
+
+h5 {
+  display: block;
+  width: 70%;
+  background-color: #ddd;
+  font-size: 0.83em;
+  margin-block-start: 1.67em;
+  margin-block-end: 1.67em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  font-weight: bold;
+}

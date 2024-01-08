@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <!--https://kit.fontawesome.com นำ icon  -->
+  <link rel="stylesheet" href="/product.css">
+  <script src="https://kit.fontawesome.com/cd42ef7ca4.js" crossorigin="anonymous"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</head>
+
+<body>
+  <!-- ออกแบบ nav ที่ใช้ div เเละ a ในการกำหนดแถบต่างๆ -->
+  <div class="topnav">
+    <a class="active" href="/homepage"><i class="fa-solid fa-house"></i> Home</a>
+    <a href="/cataloge"><i class="fa-solid fa-bars"></i> Menu</a>
+    <a href="/aboutus"><i class="fa-solid fa-address-card"></i> About us</a>
+    <div class="login-float">
+      <a href="/loginadmin"><i class="fa-solid fa-right-to-bracket"></i> Login</a>
+    </div>
+  </div>
+  <center>
+    <!--กำหนดการประกาศ select , insert , update ,delete ในรูปเเบบ form ให้กรอก เเละ input -->
+<div class="form-search">
+        <!--Select all -->
+        <h1>Search all admin</h1>
+        <div class="buttons">
+          <button type="submit" class="btn" id="selectall">Search all</button>
+        </div>
+        <div id="output"></div>
+
+      <!--Select id name job-->
+
+        <h1>Search Id-Name-Job</h1>
+        <h4>ADMIN ID:</h4>
+        <i class="fa-solid fa-id-card-clip"></i>
+        <input type="text" id="IDadminsearch" name="idadmin" placeholder="EX: Am01">
+        <br>
+        <h4>ADMIN NAME:</h4>
+        <i class="fa-solid fa-signature"></i>
+        <input type="text" id="namesearch" name="name" placeholder="Admin name">
+        <br>
+        <h4>ADMIN JOB:</h4>
+        <i class="fa-solid fa-briefcase"></i>
+        <input name="job" id="jobsearch" placeholder="Job description"></input>
+        <br>
+        <div class="buttons">
+          <button type="submit" class="btn" id="selectidnamejob">Search</button>
+        </div>
+        <div id="selectidnamejobhtml"></div>
+      </div>
+
+    <!--insert -->
+<div class="form-add-up-del">
+        <h1>Add admin</h1>
+        <h4>ADMIN ID:</h4>
+        <i class="fa-solid fa-id-card-clip"></i>
+        <input type="text" id="IDadmin" name="idadmin" placeholder="EX: Am01">
+        <br>
+        <h4>ADMIN NAME:</h4>
+        <i class="fa-solid fa-signature"></i>
+        <input type="text" id="Aname" name="name" placeholder="Admin name">
+        <br>
+        <h4>ADMIN JOB </h4>
+        <i class="fa-solid fa-briefcase"></i>
+        <input type="text" id="job" name="job" placeholder="Job description">
+        <br>
+        <h4>ADMIN ADD:</h4>
+        <i class="fa-solid fa-location-dot"></i>
+        <input name="job" id="address" placeholder="address"></input>
+        <h4>ADMIN GEN:</h4>
+        <i class="fa-solid fa-person"></i><i class="fa-solid fa-person-dress"></i>
+        <input type="text" id="gen" name="gen" placeholder="F , M">
+        <br>
+        <h4>ADMIN PHONE:</h4>
+        <i class="fa-solid fa-phone"></i>
+        <input type="text" id="phone" name="phone" placeholder="xxx-xxx-xxxx">
+        <div class="buttons">
+          <button type="submit" class="btn" id="insert">Add</button>
+        </div>
+      <!--Update-->
+
+        <h1>Update admin</h1>
+        <h4>ADMIN ID:</h4>
+        <i class="fa-solid fa-id-card-clip"></i>
+        <input type="text" id="IDadminup" name="idadmin" placeholder="EX: Am01">
+        <br>
+        <h4>ADMIN NAME:</h4>
+        <i class="fa-solid fa-signature"></i>
+        <input type="text" id="Anameup" name="name" placeholder="Admin name">
+        <br>
+        <h4>ADMIN JOB </h4>
+        <i class="fa-solid fa-briefcase"></i>
+        <input type="text" id="jobup" name="job" placeholder="Job description">
+        <br>
+        <h4>ADMIN ADD.:</h4>
+        <i class="fa-solid fa-location-dot"></i>
+        <input name="job" id="addressup" placeholder="address"></input>
+        <h4>ADMIN GEN:</h4>
+        <i class="fa-solid fa-person"></i><i class="fa-solid fa-person-dress"></i>
+        <input type="text" id="genup" name="gen" placeholder="F , M">
+        <br>
+        <h4>ADMIN PHONE:</h4>
+        <i class="fa-solid fa-phone"></i>
+        <input type="text" id="phoneup" name="phone" placeholder="xxx-xxx-xxxx">
+        <div class="buttons">
+          <button type="submit" class="btn" id="update">Update</button>
+        </div>
+      <!--Delete-->
+        <h1>Delete admin</h1>
+        <h4>ADMIN ID:</h4>
+        <i class="fa-solid fa-id-card-clip"></i>
+        <input type="text" id="IDadmindelete" name="IDadmin" placeholder="EX: Am01">
+        <div class="buttons">
+          <button type="submit" class="btn" id="delete">Delete</button>
+        </div>
+      </div>
+    <h2><a href="/addproduct">Click here to manage the product</a></h2>
+    <!--เป็นตัวเชื่อม wedservice ในการเรียกใช้ select insert update delete เหตูที่ไว้ล่างสุดเพราะจำเป็นต้องรับค่าใน form-->
+    <script src="/calladminWS.js"></script>
+  </center>
+
+</body>
+</html>

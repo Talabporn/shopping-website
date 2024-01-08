@@ -1,0 +1,62 @@
+/*---------ออกเเบบเป็น box size-----*/
+*{
+    margin: 0;
+    padding: 0;
+    outline: none;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+  }
+/*---------กำหนดหน้า page เเละ font-------------*/
+  #error-page{
+    position: absolute;
+    top: 10%;
+    left: 15%;
+    right: 15%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #fff;
+    box-shadow: 0px 5px 10px rgba(0,0,0,0.1);
+  }
+  #error-page .content{
+    max-width: 600px;
+    text-align: center;
+  }
+  .content h2.header{
+    font-size: 18vw;
+    line-height: 1em;
+    position: relative;
+  }
+  .content h4{
+    font-size: 1.5em;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    color: #000;
+    font-size: 2em;
+    max-width: 600px;
+    position: relative;
+  }
+  .content p{
+    font-size: 1.2em;
+    color: #0d0d0d;
+  }
+  /*button การกดย้อนกลับ เเละกดไปหน้า home*/
+  .content .btns{
+    margin: 25px 0;
+    display: inline-flex;
+  }
+  .content .btns a{
+    display: inline-block;
+    margin: 0 10px;
+    text-decoration: none;
+    border: 2px solid #2e2e2e;
+    color: #2c2c2c;
+    font-weight: 500;
+    padding: 10px 25px;
+    border-radius: 25px;
+    text-transform: uppercase;
+  }
+  .content .btns a:hover{
+    background: #3a4043;
+    color: #fff;
+  }

@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!--https://kit.fontawesome.com นำ icon  -->
+    <link rel="stylesheet" href="/product.css">
+    <script src="https://kit.fontawesome.com/cd42ef7ca4.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <!-- ออกแบบ nav ที่ใช้ div เเละ a ในการกำหนดแถบต่างๆ -->
+    <div class="topnav">
+        <a class="active" href="/homepage"><i class="fa-solid fa-house"></i> Home</a>
+        <a href="/cataloge"><i class="fa-solid fa-bars"></i> Menu</a>
+        <a href="/aboutus"><i class="fa-solid fa-address-card"></i> About us</a>
+        <div class="login-float">
+            <a href="/loginadmin"><i class="fa-solid fa-right-to-bracket"></i> Login</a>
+        </div>
+    </div>
+    <center>
+        <!--กำหนดการประกาศ select , insert , update ,delete ในรูปเเบบ form ให้กรอก เเละ input -->
+        <div class="form-search">
+                <h1>Search all product</h1>
+                <div class="buttons">
+                    <button type="submit" class="btn" id="selectall">Select all</button>
+                </div>
+                <div id="outputSA"></div>
+
+                <h1>Search product</h1>
+                <h4>PRODUCT TYPE:</h4>
+                <i class="fa-solid fa-id-card-clip"></i>
+                <input type="text" id="selectType" name="Product Type" placeholder="Type">
+                <br>
+                <h4>PRODUCT NAME:</h4>
+                <i class="fa-solid fa-id-card-clip"></i>
+                <input type="text" id="selectName" name="Product Name" placeholder="Product Name">
+                <br>
+                <h4>PRODUCT ID ADMIN:</h4>
+                <i class="fa-solid fa-id-card-clip"></i>
+                <input type="text" id="selectAdmin" name="Product Admin" placeholder="EX: Am01">
+                <br>
+                <div class="buttons">
+                    <button type="submit" class="btn" id="selectCat">Select</button>
+                </div>
+                <div id="selecttype"></div>
+        </div>
+        <div class="form-add-up-del">
+                <h1>Add product</h1>
+                <h4>PRODUCT ID:</h4>
+                <i class="fa-solid fa-id-card-clip"></i>
+                <input type="text" id="IDP" name="Product ID" placeholder="EX: Pd01">
+                <br>
+                <h4>PRODUCT NAME:</h4>
+                <i class="fa-solid fa-file-signature"></i>
+                <input type="text" id="Proname" name="Product name" placeholder="Product name">
+                <br>
+                <h4>PRICE:</h4>
+                <i class="fa-solid fa-money-bill-wave"></i>
+                <input type="text" id="Price" name="Product Price" placeholder="EX: 200">
+                <br>
+                <h4>PRODUCT DETAILS:</h4>
+                <i class="fa-solid fa-circle-info"></i>
+                <input type="text" id="details" name="Product details" placeholder="Product details"></input>
+                <br>
+                <h4>PRODUCT TYPE:</h4>
+                <i class="fa-solid fa-circle-info"></i>
+                <input type="text" id="Ptype" name="Product Ptype" placeholder="Type"></input>
+                <br>
+                <h4>DATE UP STATUS:</h4>
+                <i class="fa-solid fa-calendar"></i>
+                <input type="text" id="dateup" name="Product dateup" placeholder="EX: 2002-06-23">
+                <br>
+                <h4>ADMIN ID:</h4>
+                <i class="fa-solid fa-id-card-clip"></i>
+                <input type="text" id="IDadmin" name="Product IDadmin" placeholder="EX: Am01">
+                <br>
+                <div class="buttons">
+                    <button type="submit" class="btn" id="insert">Add</button>
+                </div>
+                <div id="outputIn"></div>
+
+                <h1>Update product</h1>
+                <h4>PRODUCT ID:</h4>
+                <i class="fa-solid fa-id-card-clip"></i>
+                <input type="text" id="IDPUp" name="Product ID" placeholder="EX: Pd01">
+                <br>
+                <h4>PRODUCT NAME:</h4>
+                <i class="fa-solid fa-file-signature"></i>
+                <input type="text" id="PronameUp" name="Product name" placeholder="Product name">
+                <br>
+                <h4>PRICE:</h4>
+                <i class="fa-solid fa-money-bill-wave"></i>
+                <input type="text" id="PriceUp" name="Product Price" placeholder="EX: 200">
+                <br>
+                <h4>PRODUCT DETAILS:</h4>
+                <i class="fa-solid fa-circle-info"></i>
+                <input type="text" id="detailsUp" name="Product details" placeholder="Product details"></input>
+                <br>
+                <h4>PRODUCT TYPE:</h4>
+                <i class="fa-solid fa-circle-info"></i>
+                <input type="text" id="PtypeUp" name="Product Ptype" placeholder="Product Ptype"></input>
+                <br>
+                <h4>DATE UP STATUS:</h4>
+                <i class="fa-solid fa-calendar"></i>
+                <input type="text" id="dateupUp" name="Product dateup" placeholder="EX: 2002-06-23">
+                <br>
+                <h4>ADMIN ID:</h4>
+                <i class="fa-solid fa-id-card-clip"></i>
+                <input type="text" id="IDadminUp" name="Product IDadmin" placeholder="EX: Am01">
+                <br>
+                <div class="buttons">
+                    <button type="submit" class="btn" id="update">Update</button>
+                </div>
+                <div id="outputUp"></div>
+
+                <h1>Delete product</h1>
+                <h4>PRODUCT ID:</h4>
+                <i class="fa-solid fa-barcode"></i>
+                <input type="text" id="ProductDeleteid" name="Product ID" placeholder="EX: Pd01">
+                <div class="buttons">
+                    <button type="submit" class="btn" id="delete">Delete</button>
+                </div>
+                <div id="outputDl"></div>
+        </div>
+        <!--สามารถดูสินค้านอกร้านที่สนใจจะนำมาขายต่อได้ที่นี้-->
+        <div class="form-outside">
+                <h1>Products outside the store</h1>
+                <h4>PRODUCT NAME:</h4>
+                <i class="fa-solid fa-file-signature"></i>
+                <input type="text" id="Pronameother" name="Product name" placeholder="Product name">
+                <br>
+                <div class="buttons">
+                    <button type="submit" class="btn" id="searchother">search</button>
+                </div>
+                <div id="outputOT"></div>
+        </div>
+        <h2><a href="/addadmin">Click here to admin information</a></h2>
+        <!--เป็นตัวเชื่อม wedservice ในการเรียกใช้ select insert update delete เหตูที่ไว้ล่างสุดเพราะจำเป็นต้องรับค่าใน form-->
+        <script src="callproductWS.js"></script>
+    </center>
+</body>
+</html>

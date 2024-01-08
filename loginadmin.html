@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>
+    Login admin
+  </title>
+  <!--https://kit.fontawesome.com นำ icon  -->
+  <script src="https://kit.fontawesome.com/cd42ef7ca4.js" crossorigin="anonymous"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="/login.css">
+</head>
+
+<body>
+  <!-- ออกแบบ nav ที่ใช้ div เเละ a ในการกำหนดแถบต่างๆ -->
+  <div class="topnav">
+    <a class="active" href="/homepage"><i class="fa-solid fa-house"></i> Home</a>
+    <a href="/cataloge"><i class="fa-solid fa-bars"></i> Menu</a>
+    <a href="/aboutus"><i class="fa-solid fa-address-card"></i> About us</a>
+    <div class="login-float">
+      <a href="/loginadmin"><i class="fa-solid fa-right-to-bracket"></i> Login</a>
+    </div>
+  </div>
+
+  <!--action เพื่อนำทางไปยัง หน้าที่เราต้องการ form เเต่ละอันต้องใส่ name ในการเข้าถึง-->
+  <section>
+    <div class="form-column">
+      <Fieldset>
+        <form action="/signin" method="post">
+          <h2>LOGIN ADMIN</h2>
+          <input id="email" name="email" type="email" placeholder="email@admin.com" />
+          <br><input id="pw" name="password" type="password" placeholder="Password" />
+          <br><button type="submit" value="Login" id="login">LOGIN</button>
+        </form>
+      </Fieldset>
+      <br>
+    </div>
+    <div id="output"></div>
+  </section>
+
+</body>
+<!--เป็นตัวเชื่อม wedservice เหตูที่ไว้ล่างสุดเพราะจำเป็นต้องรับค่าใน form-->
+<script src="callloginws.js"></script>
+
+</html>
